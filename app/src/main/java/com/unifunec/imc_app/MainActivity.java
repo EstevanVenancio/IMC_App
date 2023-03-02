@@ -33,25 +33,30 @@ public class MainActivity extends AppCompatActivity {
 
                 double rs = (ps/(alt*alt));
 
-
-                if (rs < 18.5){
+                if (rs < 16){
                     resut.setText(String.format("IMC: %.2f", rs));
-                    classificacao.setText("MAGREZA");
+                    classificacao.setText("MAGREZA GRAU III");
+                } else if (rs < 16 && rs <= 16.9){
+                    resut.setText(String.format("IMC: %.2f", rs));
+                    classificacao.setText("MAGREZA GRAU II");
+                } else if (rs < 17 && rs <= 18.4){
+                    resut.setText(String.format("IMC: %.2f", rs));
+                    classificacao.setText("MAGREZA GRAU I");
                 } else if (rs > 18.5 && rs <= 24.9){
                     resut.setText(String.format("IMC: %.2f", rs));
-                    classificacao.setText("NORMAL");
-                } else if (rs >25 && rs <=29.9){
+                    classificacao.setText("EUTROFIA");
+                } else if (rs >25 && rs <= 29.9){
                     resut.setText(String.format("IMC: %.2f", rs));
-                    classificacao.setText("SOBREPESO");
+                    classificacao.setText("PRÉ-OBESIDADE");
                 } else if (rs > 30 && rs <= 34.9){
                     resut.setText(String.format("IMC: %.2f", rs));
-                    classificacao.setText("OBESIDADE GRAU I");
+                    classificacao.setText("OBESIDADE MODERADA (GRAU I)");
                 } else if (rs > 35 && rs <= 39.9){
                     resut.setText(String.format("IMC: %.2f", rs));
-                    classificacao.setText("OBESIDADE GRAU II");
+                    classificacao.setText("OBESIDADE SEVERA (GRAU II)");
                 } else if (rs > 40){
                     resut.setText(String.format("IMC: %.2f", rs));
-                    classificacao.setText("OBESIDADE GRAU III");
+                    classificacao.setText("OBESIDADE MÓRBIDA (GRAU III)");
                 }
 
                 calcular.setEnabled(false);
