@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 if (rs < 18.5){
-                    resut.setText(String.format("IMC:%.2f", rs));
+                    resut.setText(String.format("IMC: %.2f", rs));
                     classificacao.setText("MAGREZA");
                 } else if (rs > 18.5 && rs <= 24.9){
                     resut.setText(String.format("IMC: %.2f", rs));
